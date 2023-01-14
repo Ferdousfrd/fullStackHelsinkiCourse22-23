@@ -2,23 +2,36 @@ import { useState } from 'react'
 
 const Button = ({onClick, text}) => <button onClick={onClick}>{text}</button>
 
-const StatisticLine = ({text, value}) => <p>{text} {value}</p>
+const StatisticLine = ({text, value}) => 
+  <tr>
+    <td>{text}</td>
+    <td>{value}</td>
+  </tr>
 
 const Header = () => <h1> give feedback</h1>
 
 const Statistics = ({good, neutral,bad}) => {
   const sum = good + neutral+ bad
+  const average = (good-bad)/sum
+  const positive = `${(good/sum)*100} %`
+
   return(
     sum>0 ?(
     <>
       <h2>statistics</h2>
-      <StatisticLine text = "good" value = {good} />
-      <StatisticLine text = "neutral" value = {neutral} />
-      <StatisticLine text = "bad" value = {bad} />
-      <StatisticLine text = "all" value = {sum} />
+      <table>
+        <tbody>
+          <StatisticLine text = "good" value = {good} />
+          <StatisticLine text = "neutral" value = {neutral} />
+          <StatisticLine text = "bad" value = {bad} />
+          <StatisticLine text = "all" value = {sum} />
+          <StatisticLine text = "average" value = {average} />
+          <StatisticLine text = "positive" value = {positive}/>
+        </tbody>
+      </table>
 
-      <p>average {good-bad/sum } </p>
-      <p>positive {good/sum*100} %</p>
+
+
     </>
     ) :( 
     <p>No feedback given</p>
