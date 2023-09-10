@@ -2,10 +2,14 @@
 Full Stack Open 2022(Helsinki course)
 
 
-//Here, submittig all the assingments(part 1 to onward) for the Full Stack Helsinki course.
-//Part 0 repo : https://github.com/Ferdousfrd/fullStackHelsinkiPart0.git
 
 Course and work description:
+
 part 0 - Fundamentals of web apps
 By mistake i made another repo for part 0. Here is the link for that. ( https://github.com/Ferdousfrd/fullStackHelsinkiPart0.git)
-part 1 - Intro to React, JavaScript, Component state and event handlers, debugging React apps
+
+part 1 - 
+Intro to React (ex1.1-1.2)
+Basics of JS (ex1.3-1.5)
+Component state and event handlers (noexercises, just updated the old ones)
+debugging react app (ex1.6-1.11)
